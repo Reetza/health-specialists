@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Audiology</title>
+    </head>
+    <link rel="stylesheet" href="Style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Julee&family=Roboto+Condensed:wght@300&family=Tangerine&display=swap" rel="stylesheet">
+    <body>
+        <h1 class= "main-title">Audiology</h1>
+        <br>
+       
+
+        <div class="slideshow-container">
+<!-- makes the slideshow for pictures-->
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="audiology.jfif" alt = "Audiology" id="img2" style="width:80%"> 
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  
+  <img src="audiology2.jfif" alt = "Audiology2" id="img2" style="width:80%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  
+  <img src="audiology3.jfif" alt = "Audiology3" id="img2" style="width:80%"> 
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<h2> What do they do?</h2>
+<p> Audiologists are experts who can help to prevent, diagnose, and treat hearing and balance disorders for people of all ages. Audiologists provide professional and personalized services to improve persons' involvement in important activities in their lives and better their quality of life.</p>
+<h2>How did they get their degree?</h2>
+<p>Audiologists must earn a doctoral degree in the field to become licensed and certified. That requires a four-year bachelor's degree followed by four years in a doctor of audiology program. </p>
+       <ul class= "ul">
+           <li><a href= "index.html">|Home|</a></li>
+           <li><a href= "page2.html">|Audiology|</a></li>
+           <li><a href= "page3.html">|Optometrists|</a></li>
+           <li><a href= "page4.html">|Radiology|</a></li>
+           <li><a href= "page6.html">|Citations|</a></li>
+           <li><a href= "page5.html">|Form|</a></li>
+           
+        </ul>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+    </body>
+</html>
